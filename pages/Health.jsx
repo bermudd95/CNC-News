@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import NewsItem from '@/Components/NewsItem'
 
 const Health = () => {
@@ -7,7 +7,7 @@ const Health = () => {
 
     useEffect(() => {
       const getArticles = async () => {
-        const response = await axios.get("https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=4880c280dfe1406da8f39eed721f85fc")
+        const response = await Axios.get("https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=4880c280dfe1406da8f39eed721f85fc")
         console.log(response)
         setArticles(response.data.articles)
       }
